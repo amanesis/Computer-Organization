@@ -65,6 +65,19 @@ component LogicalOr
 	        B : in  STD_LOGIC_VECTOR (31 downto 0);
            output : out  STD_LOGIC_VECTOR (31 downto 0));
 end component;
+
+component LogicalNand is
+    Port ( A : in  STD_LOGIC_VECTOR (31 downto 0);
+           B : in  STD_LOGIC_VECTOR (31 downto 0);
+           output : out  STD_LOGIC_VECTOR (31 downto 0));
+end component;
+
+component LogicalNor is
+    Port ( A : in  STD_LOGIC_VECTOR (31 downto 0);
+           B : in  STD_LOGIC_VECTOR (31 downto 0);
+           output : out  STD_LOGIC_VECTOR (31 downto 0));
+end component;
+
 component ComplementaryNumber
     Port ( input : in  STD_LOGIC_VECTOR (31 downto 0);
            output : out  STD_LOGIC_VECTOR (31 downto 0));
@@ -95,7 +108,7 @@ component OrGate
            output : out  STD_LOGIC);
 end component;
 signal carry_sub,carry_add:std_logic;
-signal add_output,sub_output,log_and_output,log_or_output,compl_num_output,arithm_output,r_log_shift_output,l_log_shift_output,r_cyc_output,l_cyc_output:std_logic_vector(31 downto 0);
+signal add_output,sub_output,log_and_output,log_or_output,log_nand_output,log_nor_output,compl_num_output,arithm_output,r_log_shift_output,l_log_shift_output,r_cyc_output,l_cyc_output:std_logic_vector(31 downto 0);
 signal temp_output:std_logic_vector(31 downto 0);
 signal temp_Zero:std_logic_vector(30 downto 0);
 signal Ovf_add,Ovf_sub:std_logic;
@@ -106,6 +119,8 @@ begin
   Sub1:Sub port map(A=>A,B=>B,CarryIn=>'0',CarryOut=>carry_sub,Ovf=>Ovf_sub,output=>sub_output);
   Log_And:LogicalAnd port map(A=>A,B=>B,output=>log_and_output);
   Log_Or:LogicalOr port map(A=>A,B=>B,output=>log_or_output);
+  Log_Nand: LogicalNand port map (A=>A, B=> B, output => log_nand_output); --new
+  Log_Nor: LogicalNor port map(A=>A,B=>B,output=>log_nor_output); --new
   ComplNum:ComplementaryNumber port map(input=>A,output=>compl_num_output);
   Arith_shift:ArithmeticShift port map(input=>A,output=>arithm_output);
   R_Logical_Shift:LogicalRightShift port map(input=>A,output=>r_log_shift_output);
@@ -120,8 +135,8 @@ begin
 								  input(3)=>log_or_output(i),
 								  input(4)=>compl_num_output(i),
 								  input(5)=>'0',
-								  input(6)=>'0',
-								  input(7)=>'0',
+								  input(6)=>log_nand_output(i),
+								  input(7)=>log_nor_output(i),
 								  input(8)=>arithm_output(i),
 								  input(9)=>r_log_shift_output(i),
 								  input(10)=>l_log_shift_output(i),
