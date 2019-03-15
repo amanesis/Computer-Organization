@@ -13,10 +13,14 @@ end mux5bit_2x1;
 
 architecture Behavioral of mux5bit_2x1 is
 
+signal tmp_delay :  STD_LOGIC_VECTOR (4 downto 0);
+
 begin
 
-output<= In0 when sel = '0' else
+tmp_delay<= In0 when sel = '0' else
 	In1;
+
+output<=tmp_delay after 5 ns;	
 
 end Behavioral;
 

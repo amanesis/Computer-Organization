@@ -53,7 +53,7 @@ PC_Reg32: Reg32 PORT MAP(
 		clk => clk
 	);
 	
-PC<=s2;
+PC<=s2 after 5 ns;
 
 end Behavioral;
 
