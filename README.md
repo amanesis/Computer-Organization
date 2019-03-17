@@ -1,2 +1,2 @@
 # Computer-Organization
-Design of a simple processor.
+Design of a multicycle MIPS processor.
