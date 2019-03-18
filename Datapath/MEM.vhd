@@ -42,8 +42,8 @@ signal s2, temp : std_logic_vector(31 downto 0);
 
 begin
 
-temp <= ALU_MEM_Addr + "00000000000000000000100000000000"; -- +0x400
-	
+temp <= ALU_MEM_Addr + "00000000000000000000010000000000"; -- +0x400
+																--	"00000000000000000000010000000000"
 		Inst_IFSTAGE: IFSTAGE PORT MAP(
 		PC_Immed => PC_Immed,
 		PC_sel => PC_sel,
@@ -59,7 +59,7 @@ temp <= ALU_MEM_Addr + "00000000000000000000100000000000"; -- +0x400
 		inst_addr => s2(12 downto 2), --"0"
 		inst_dout => Instr, -- "0"
 		data_we => Mem_WrEn,
-		data_addr => temp(12 downto 2),
+		data_addr => temp(10 downto 0),
 		data_din =>MEM_DataIn,
 		data_dout => MEM_DataOut
 	);

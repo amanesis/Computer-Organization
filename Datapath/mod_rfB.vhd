@@ -12,7 +12,9 @@ end mod_rfB;
 architecture Behavioral of mod_rfB is
 
 begin
+
 rfB_out <= "000000000000000000000000"&rfB(7 downto 0);
+						--"111111111111111111111111"
 
 end Behavioral;
 
