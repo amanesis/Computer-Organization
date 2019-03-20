@@ -8,6 +8,7 @@ entity ALUSTAGE is
            Immed : in  STD_LOGIC_VECTOR (31 downto 0);
            ALU_Bin_sel : in  STD_LOGIC;
            ALU_func : in  STD_LOGIC_VECTOR (3 downto 0);
+			  zero: out STD_LOGIC;
            ALU_out : out  STD_LOGIC_VECTOR (31 downto 0));
 end ALUSTAGE;
 
@@ -43,6 +44,7 @@ ALU_final : ALU port map(
 							A => RF_A,
 							B => temp_MuxOut,
 							Op => ALU_func,
+							Zero => zero,
 							output => ALU_out);							
 							
 

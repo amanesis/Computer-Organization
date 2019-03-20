@@ -16,7 +16,7 @@ signal tmp_delay :  STD_LOGIC_VECTOR (31 downto 0);
 begin
 
 tmp_delay<= A when sel = '0' else
-	B;
+	B when sel='1';
 
 C<=tmp_delay after 5 ns;
 end Behavioral;

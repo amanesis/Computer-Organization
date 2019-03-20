@@ -10,8 +10,8 @@ port ( clk , reset : in std_logic;
 			IR_en: in std_logic;
 			ALU_func : in std_logic_vector(3 downto 0); 
 			RF_WrData_sel, RF_B_sel , RF_WrEn : in std_logic;
-			Instr : out std_logic_vector(31 downto 0)
-			--zero : out std_logic
+			Instr : out std_logic_vector(31 downto 0);
+			zero : out std_logic
 		);
 end DATAPATH;
 
@@ -81,7 +81,8 @@ architecture Behavioral of DATAPATH is
 		RF_B : IN std_logic_vector(31 downto 0);
 		Immed : IN std_logic_vector(31 downto 0);
 		ALU_Bin_sel : IN std_logic;
-		ALU_func : IN std_logic_vector(3 downto 0);          
+		ALU_func : IN std_logic_vector(3 downto 0);      
+		zero: out STD_LOGIC;	
 		ALU_out : OUT std_logic_vector(31 downto 0)
 		);
 	END COMPONENT;
@@ -149,6 +150,7 @@ ALU_STAGE: ALUSTAGE PORT MAP(
 		Immed => in_immed,
 		ALU_Bin_sel =>ALU_Bin_sel ,
 		ALU_func => ALU_func,
+		Zero => zero,
 		ALU_out => in_alu_out
 	);
 

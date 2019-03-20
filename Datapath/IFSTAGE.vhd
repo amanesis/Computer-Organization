@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_SIGNED.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity IFSTAGE is
 Port (PC_Immed : in std_logic_vector(31 downto 0);
@@ -29,14 +30,17 @@ PORT(
 		);
 END COMPONENT;
 
-signal s1,s2,m1,m2 : std_logic_vector (31 downto 0);
+signal s1,s2,m1,m2 ,pcc: std_logic_vector (31 downto 0);
+signal outputF: std_logic_vector (33 downto 0);
 --m1,m2 mux inputs
 --s1,s2 inner signals for reg32 i/o
 
 begin
 
-m1 <= s2 + "00000000000000000000000000000100";
-m2 <= m1 + PC_Immed;
+m1 <= s2 + 4;--"00000000000000000000000000000100";
+m2 <= m1 + PC_Immed+4;
+
+
 
 Inst_MUX_IF: MUX_IF PORT MAP(
 		A =>m1 ,
