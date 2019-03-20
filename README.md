@@ -3,7 +3,9 @@
 1. ALU + RF
 2. ALUSTAGE, DECSTAGE, IFSTAGE, MEMSTAGE
 
-3. Datapath Simulation
+3. Datapath 
+
+![Screenshot](https://github.com/amanesis/Computer-Organization/blob/master/54433558_2067871909969037_678806868029603840_n.jpg)
 
 ![Screenshot](https://github.com/amanesis/Computer-Organization/blob/master/Screenshot_20190320_222649.png)
       
