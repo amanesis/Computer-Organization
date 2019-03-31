@@ -42,4 +42,4 @@ Control FSM:
 
 ![Screenshot](https://github.com/amanesis/Computer-Organization/blob/master/block-diagrams/CPU_control_fsm.jpg)
 
-
+ 
