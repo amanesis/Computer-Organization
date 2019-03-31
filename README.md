@@ -36,7 +36,10 @@ b -2
 
 add r1.r2,r3
 
-Control FSM
+
+
+Control FSM:
+
 ![Screenshot](https://github.com/amanesis/Computer-Organization/blob/master/block-diagrams/CPU_control_fsm.jpg)
 
 
