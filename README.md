@@ -7,8 +7,11 @@
 
 ![Screenshot](https://github.com/amanesis/Computer-Organization/blob/master/54433558_2067871909969037_678806868029603840_n.jpg)
 
-![Screenshot](https://github.com/amanesis/Computer-Organization/blob/master/Screenshot_20190320_222649.png)
-      
+4. Multicycle Processor and Exceptions (IBUS, ADDRL)
+
+Processor Simulation
+![Screenshot](https://github.com/amanesis/Computer-Organization/blob/master/Simulations/Lab2/Multicycle_processor_sim.jpg)
+
 PROGRAM:
 
 addi r5,r0,8 
@@ -32,13 +35,6 @@ bne r5,r5,8
 b -2
 
 add r1.r2,r3
-
-
-
-4. Multicycle Processor and Exceptions (IBUS, ADDRL)
-
-Processor Simulation
-![Screenshot](https://github.com/amanesis/Computer-Organization/blob/master/Simulations/Lab2/Multicycle_processor_sim.jpg)
 
 Control FSM
 ![Screenshot](https://github.com/amanesis/Computer-Organization/blob/master/block-diagrams/CPU_control_fsm.jpg)
