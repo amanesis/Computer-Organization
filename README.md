@@ -35,4 +35,12 @@ add r1.r2,r3
 
 
 
-4. Control and Exceptions
+4. Multicycle Processor and Exceptions (IBUS, ADDRL)
+
+Processor Simulation
+![Screenshot](https://github.com/amanesis/Computer-Organization/blob/master/Simulations/Lab2/Multicycle_processor_sim.jpg)
+
+Control FSM
+![Screenshot](https://github.com/amanesis/Computer-Organization/blob/master/block-diagrams/CPU_control_fsm.jpg)
+
+
