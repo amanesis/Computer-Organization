@@ -32,9 +32,9 @@ ror r2,r4
 
 bne r5,r5,8
 
-b -2
+b -2  (infinite loop)
 
-add r1.r2,r3
+add r1.r2,r3 (not executed)
 
 
 
