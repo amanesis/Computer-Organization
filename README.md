@@ -1,4 +1,4 @@
-## Computer-Organization
+## Computer Organization 
 ## Design of a multicycle MIPS processor.
 
 1. ALU + RF
@@ -32,6 +32,6 @@ add r1,r2,r3    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &
 
 Control FSM: <br />
 
-![Screenshot](https://github.com/amanesis/Computer-Organization/blob/master/block-diagrams/CPU_control_fsm.jpg)
+![Screenshot](https://github.com/amanesis/Computer-Organization/blob/master/block-diagrams/CPU_control_fsm.jpg)<br />
 
- 
+5. Pipelined MIPS processor<br />
