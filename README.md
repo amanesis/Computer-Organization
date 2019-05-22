@@ -35,3 +35,5 @@ Control FSM: <br />
 ![Screenshot](https://github.com/amanesis/Computer-Organization/blob/master/block-diagrams/CPU_control_fsm.jpg)<br />
 
 5. Pipelined MIPS processor<br />
+
+![Screenshot](https://github.com/amanesis/Computer-Organization/blob/master/block-diagrams/Pipelined_Processor.jpg)<br />
